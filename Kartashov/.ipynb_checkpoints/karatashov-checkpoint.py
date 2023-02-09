@@ -36,4 +36,3 @@ fig, ax = plt.subplots(subplot_kw={"projection": "3d"})
 # Plot the surface.
 surf = ax.plot_surface(x_, y_, r_, cmap=cm.coolwarm,
                        linewidth=0, antialiased=False)
-
