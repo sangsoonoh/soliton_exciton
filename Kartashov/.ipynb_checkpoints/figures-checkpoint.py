@@ -47,3 +47,6 @@ def honeycomb():
     plt.title('Locations of Gaussians in the bulk of honeycomb lattice')
     plt.axis('off')
     plt.show()
+    plt.rcParams.update({
+        "text.usetex": False
+    })
