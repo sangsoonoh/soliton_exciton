@@ -1,10 +1,13 @@
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import numpy as np
+
+usetex = True
+
 def honeycomb():
     f = plt.figure(figsize=(10,10))
     plt.rcParams.update({
-        "text.usetex": True
+        "text.usetex": usetex
     })
     plt.xlim([0,800])
     plt.ylim([0,400])
@@ -42,8 +45,10 @@ def honeycomb():
     ax.text(370, 205, '$b$')
     plt.annotate(text='', xy=(350,200), xytext=(350+b-7,200), arrowprops=dict(arrowstyle='<->'))
     primvec_start = (550,200)
-    plt.annotate(text='$\mathbf{a_1}=(\sqrt{3}/2,1/2)a$', xy=primvec_start, xytext=tuple(np.array(primvec_start)+np.array(a1)), arrowprops=dict(arrowstyle='<-'))
-    plt.annotate(text='$\mathbf{a_2}=(\sqrt{3}/2,-1/2)a$', xy=primvec_start, xytext=tuple(np.array(primvec_start)+np.array(a2)), arrowprops=dict(arrowstyle='<-'))
+    ax.text(560, 265, '$\mathbf{a_1}=(\sqrt{3}/2,1/2)a$')
+    ax.text(560, 125, '$\mathbf{a_2}=(\sqrt{3}/2,-1/2)a$')
+    plt.annotate(text='', xy=primvec_start, xytext=tuple(np.array(primvec_start)+np.array(a1)), arrowprops=dict(arrowstyle='<-'))
+    plt.annotate(text='', xy=primvec_start, xytext=tuple(np.array(primvec_start)+np.array(a2)), arrowprops=dict(arrowstyle='<-'))
     plt.title('Locations of Gaussians in the bulk of honeycomb lattice')
     plt.axis('off')
     plt.show()
