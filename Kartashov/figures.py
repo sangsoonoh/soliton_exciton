@@ -56,7 +56,7 @@ def honeycomb():
     plt.annotate(text='', xy=primvec_start, xytext=tuple(np.array(primvec_start)+np.array(a1)), arrowprops=dict(arrowstyle='<-'))
     plt.annotate(text='', xy=primvec_start, xytext=tuple(np.array(primvec_start)+np.array(a2)), arrowprops=dict(arrowstyle='<-'))
     plt.title('Locations of Gaussians in the bulk of honeycomb lattice')
-    # plt.axis('off')
+    plt.axis('off')
     plt.show()
     plt.rcParams.update({
         "text.usetex": False
